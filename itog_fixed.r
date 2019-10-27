@@ -544,8 +544,6 @@ dt[, prob_approve := n_approves / n_calls]
 
 dt[, mean_n_calls := n_calls / n_approves]
 dt2=dt
-max(dt2$prob_approve)
-View(dt2)
 res2=res
 res2 <- unique(dt[, .(operator_login, product, lead_country, 
                      webmaster_identifier, intervals,
