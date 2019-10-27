@@ -446,7 +446,7 @@ write_fst(dt, "dt.fst")
 
 dt <- read_fst("dt.fst", as.data.table = TRUE)
 dt1=dt
-View(dt1)
+
 
 
 dt <- dt[!is.na(called_at), ]
@@ -519,7 +519,7 @@ f_up <- function(n_approves, n_calls) {
 res[, prob_ci_lo := purrr::map2_dbl(n_approves, n_calls, f_lo)]
 res[, prob_ci_up := purrr::map2_dbl(n_approves, n_calls, f_up)]
 res1=res
-View(res1)
+
 
 
 
@@ -559,7 +559,7 @@ f_up <- function(n_approves, n_calls) {
 }
 res2[, prob_ci_lo := purrr::map2_dbl(n_approves, n_calls, f_lo)]
 res2[, prob_ci_up := purrr::map2_dbl(n_approves, n_calls, f_up)]
-View(res2)
+
 # Для строк с prob_approve == 1 или prob_approve == 0
 
 res2[, operator_approved := purrr::map2_dbl(prob_ci_lo, prob_ci_up, 
